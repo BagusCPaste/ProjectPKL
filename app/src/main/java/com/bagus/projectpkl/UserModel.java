@@ -15,7 +15,7 @@ public class UserModel {
 
     public class data {
         private String id_user, first_name, username,password, email, kode_cab, nama_cab, nama_ao,
-        nama_lembaga1, getNama_lembaga2;
+        nama_lembaga1, Nama_lembaga2;
 
         public String getId_user() {
             return id_user;
@@ -90,11 +90,11 @@ public class UserModel {
         }
 
         public String getGetNama_lembaga2() {
-            return getNama_lembaga2;
+            return Nama_lembaga2;
         }
 
         public void setGetNama_lembaga2(String getNama_lembaga2) {
-            this.getNama_lembaga2 = getNama_lembaga2;
+            this.Nama_lembaga2 = getNama_lembaga2;
         }
     }
 }

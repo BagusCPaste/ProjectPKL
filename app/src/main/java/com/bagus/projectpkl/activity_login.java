@@ -2,10 +2,12 @@ package com.bagus.projectpkl;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,22 +21,23 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.http.Field;
 
-public class activity_login extends AppCompatActivity implements View.OnClickListener {
+public class activity_login extends AppCompatActivity {
     private EditText edLogin;
     private EditText edPass;
     private TextView tvDaftar;
+    private Button btnLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        edLogin = findViewById(R.id.etEmail);
-        edPass = findViewById(R.id.etPassword);
-        tvDaftar = findViewById(R.id.tvDaftar);
 
-        findViewById(R.id.btnLogin).setOnClickListener(this);
-        findViewById(R.id.tvDaftar).setOnClickListener(this);
+        edLogin = (EditText) findViewById(R.id.etEmail);
+        edPass = (EditText) findViewById(R.id.etPassword);
+        tvDaftar =(TextView) findViewById(R.id.tvDaftar);
+        btnLogin = (Button) findViewById(R.id.btn_login);
 
+        tvDaftar.setOnClickListener(v -> startActivity(new Intent(activity_login.this, MainActivity.class)));
     }
 
     private void UserLogin(){
@@ -58,37 +61,7 @@ public class activity_login extends AppCompatActivity implements View.OnClickLis
             edPass.requestFocus();
             return;
         }
-        Call<LoginResponse> call = KoneksiAPI
-                .endpoint().UserLogin(email, password);
-        call.enqueue(new Callback<LoginResponse>() {
-            @Override
-            public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
-                LoginResponse loginResponse = response.body();
-                if (!loginResponse.isError()){
-                    Toast.makeText(activity_login.this, loginResponse.getMessage(), Toast.LENGTH_LONG)
-                            .show();
-                }else{
-                    Toast.makeText(activity_login.this, loginResponse.getMessage(), Toast.LENGTH_LONG)
-                            .show();
-                }
-            }
-
-            @Override
-            public void onFailure(Call<LoginResponse> call, Throwable t) {
-
-            }
-        });
 
     }
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.btnLogin:
-                UserLogin();
-                break;
-            case R.id.tvDaftar:
-                break;
 
-        }
-    }
 }

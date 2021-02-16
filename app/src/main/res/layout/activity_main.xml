@@ -2,8 +2,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/bground"
-    android:padding="16dp">
+    android:padding="16dp"
+    tools:context=".MainActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -52,7 +54,7 @@
             android:textSize="16dip" />
 
         <EditText
-            android:id="@+id/txt_id"
+            android:id="@+id/ed_Id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -63,7 +65,7 @@
             android:singleLine="true" />
 
         <EditText
-            android:id="@+id/txt_username"
+            android:id="@+id/ed_Email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -74,7 +76,7 @@
             android:singleLine="true" />
 
         <EditText
-            android:id="@+id/txt_kode_cab"
+            android:id="@+id/ed_kode_cab"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -85,7 +87,7 @@
             android:singleLine="true" />
 
         <EditText
-            android:id="@+id/txt_nama_cab"
+            android:id="@+id/ed_nama_cab"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -96,7 +98,7 @@
             android:singleLine="true" />
 
         <EditText
-            android:id="@+id/txt_kode_ao"
+            android:id="@+id/ed_kode_ao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -106,7 +108,7 @@
             android:singleLine="true" />
 
         <EditText
-            android:id="@+id/txt_nama_lembaga1"
+            android:id="@+id/ed_nama_lembaga1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -116,7 +118,7 @@
             android:singleLine="true" />
 
         <EditText
-            android:id="@+id/txt_nama_lembaga2"
+            android:id="@+id/ed_nama_lembaga2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
