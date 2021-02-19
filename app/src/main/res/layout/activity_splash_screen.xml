@@ -29,6 +29,5 @@
         android:alpha="0"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/logob"
         android:layout_centerInParent="true"/>
 </RelativeLayout>
