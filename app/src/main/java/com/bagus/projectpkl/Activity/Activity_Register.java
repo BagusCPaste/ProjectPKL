@@ -1,14 +1,15 @@
-package com.bagus.projectpkl;
+package com.bagus.projectpkl.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.bagus.projectpkl.R;
 
 public class Activity_Register extends AppCompatActivity {
 
@@ -29,6 +30,8 @@ public class Activity_Register extends AppCompatActivity {
             startActivity(intent);
         });
         tvSignUp.setOnClickListener(v -> userSignUp());
+        Intent intent = new Intent(Activity_Register.this, activity_login.class);
+        startActivity(intent);
     }
     private void userSignUp() {
         String id = edIduser.getText().toString().trim();

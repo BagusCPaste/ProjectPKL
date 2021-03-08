@@ -10,7 +10,7 @@ import okhttp3.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class client {
+public class Client {
 
     private  static  final  String BASE_URL="http://simkoonline.ddns.net:8000/";
 
@@ -48,7 +48,6 @@ public class client {
                 .build();
 
         request apiService = retrofit.create(request.class);
-
         return apiService;
     }
 

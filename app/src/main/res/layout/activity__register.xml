@@ -6,7 +6,7 @@ android:layout_height="match_parent"
 xmlns:tools="http://schemas.android.com/tools"
 android:background="@drawable/bground"
 android:padding="16dp"
-tools:context=".MainActivity">
+tools:context=".Activity.MainActivity">
 
 <ScrollView
     android:layout_width="match_parent"

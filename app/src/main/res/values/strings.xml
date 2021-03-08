@@ -5,7 +5,12 @@
     <string name="daftar"><u>Daftar disini</u></string>
     <string name="lupa_password"><u>Lupa Kata Sandi ?</u></string>
     <string name="facebook_app_id">1234567890</string>
-    <string name="textEmail">Email</string>
+    <string name="textEmail">Email/Username</string>
     <string name="textPassword">Password</string>
     <string name="textLogin">Login</string>
+    <string name="title_home">Home</string>
+    <string name="title_setting">Setting</string>
+    <string name="title_profile">Profile</string>
+    <string name="action_search">Search</string>
+    <string name="text_Logout">Logout</string>
 </resources>

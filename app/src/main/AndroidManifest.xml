@@ -4,18 +4,19 @@
     <!-- Internet Permission -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:screenOrientation="behind"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity_Register"></activity>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".activity_login" />
+        <activity android:name=".Activity.Activity_Register"/>
+        <activity android:name=".Activity.SaldotabActivity"/>
+        <activity android:name=".Activity.MainActivity" />
+        <activity android:name=".Activity.activity_login" />
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

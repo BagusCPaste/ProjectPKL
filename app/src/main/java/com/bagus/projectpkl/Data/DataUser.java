@@ -1,4 +1,4 @@
-package com.bagus.projectpkl.model;
+package com.bagus.projectpkl.Data;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -115,7 +115,19 @@ public class DataUser {
     public void setKode_ao(String kode_ao) {
         this.kode_ao = kode_ao ;
     }
-
-
-
+    @Override
+    public String toString() {
+        return "UserResponse{" +
+                "id=" + id_user +
+                ", username='" + username + '\'' +
+                ", first_name='" + first_name + '\'' +
+                ", kode_ao='" + kode_ao + '\'' +
+                ", email='" + email + '\'' +
+                ", nama_cab=" + nama_cab +
+                ", kode_cab='" + alamat_cab + '\'' +
+                ", nama_lembaga1='"+ nama_lembaga1+'\''+
+                ", nama_lembaga2='"+ nama_lembaga2+'\''+
+                '}';
+    }
 }
+

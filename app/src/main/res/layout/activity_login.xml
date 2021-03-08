@@ -5,13 +5,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity_login"
+    tools:context=".Activity.activity_login"
     android:background="@drawable/bground">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayt"
-        android:layout_width="388dp"
-        android:layout_height="312dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="16dp"
@@ -19,14 +19,14 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
         <ImageView
             android:id="@+id/logoApp"
-            android:layout_width="match_parent"
-            android:layout_height="250dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/tv1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/logo_simko"
             app:layout_constraintTop_toTopOf="@id/constraintLayt" />
 
         <TextView
@@ -70,7 +70,8 @@
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/bg_text"/>
 
         <EditText
             android:id="@+id/etPassword"
@@ -87,7 +88,8 @@
             app:layout_constraintBottom_toTopOf="@+id/btnLogin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+            app:layout_constraintTop_toBottomOf="@+id/etEmail"
+            android:background="@drawable/bg_text"/>
 
         <Button
             android:id="@+id/btnLogin"
@@ -96,7 +98,7 @@
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="8dp"
-            android:background="@drawable/rounded_btn"
+            android:background="@drawable/bg_btn"
             android:text="@string/textLogin"
             android:textColor="#ffff"
             android:onClick="login"

@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 
+import com.bagus.projectpkl.Activity.activity_login;
+
 public class SplashScreen extends AppCompatActivity {
 
     Thread timer;
