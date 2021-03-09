@@ -62,7 +62,7 @@ public class SaldotabActivity extends AppCompatActivity {
     ResponseMember member;
     List<DataMember> mItems = new ArrayList<>();
     private MemberAdapter mAdapter;
-    private Object SPref;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,44 +70,44 @@ public class SaldotabActivity extends AppCompatActivity {
         setContentView(R.layout.activity_saldotab);
 
         View card = getLayoutInflater().inflate(R.layout.item_card, null);
-
-        Toast.makeText(SaldotabActivity.this,"eror",Toast
-        .LENGTH_LONG).show();
         rv = card.findViewById(R.id.cardListView1);
-//        tv = card.findViewById(R.id.cardTextView1);
-//        pesan = card.findViewById(R.id.cardNotFound);
-//        mypesan = card.findViewById(R.id.mypesanTextView);
-//        rv.setNestedScrollingEnabled(false);
-//        tv.setText("Daftar Rekening Simpanan");
+        tv = card.findViewById(R.id.cardTextView1);
+        pesan = card.findViewById(R.id.cardNotFound);
+        mypesan = card.findViewById(R.id.mypesanTextView);
+        rv.setNestedScrollingEnabled(false);
+        tv.setText("Daftar Rekening Simpanan");
 
-//        mytotal = findViewById(R.id.tvtotal);
-//        total = findViewById(R.id.itemcardView1);
-//        navigasi = findViewById(R.id.navigation);
-//        navigasi.setVisibility(View.VISIBLE);
+        mytotal = findViewById(R.id.tvtotal);
+        total = findViewById(R.id.itemcardView1);
+        navigasi = findViewById(R.id.navigation);
+        navigasi.setVisibility(View.VISIBLE);
+//        setUpRecyclerView();
 
-        rv.addItemDecoration(new SimpleDividerItemDecoration(this));
-        rv.setAdapter(new MemberAdapter(mItems));
-        rv.setLayoutManager(new GridLayoutManager(this, 1));
-        llroot.addView(card);
+        prepareHistory();
 
-//        prepareHistory();
+        SharedPreferences sharedPreferences = this.getSharedPreferences(SHARED_PREFS,
+                Context.MODE_PRIVATE);
+        JSONArray jsonArray = new JSONArray();
+        JSONObject obj = null;
+        obj = new JSONObject();
+        try {
+            obj.put("nohp", sharedPreferences.getString(jsonArray.toString(), ""));
+            obj.put("modul", "TAB");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        jsonArray.put(obj);
 
-//        SharedPreferences sharedPreferences = this.getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE);
-//        JSONArray jsonArray = new JSONArray();
-//        JSONObject obj = null;
-//        obj = new JSONObject();
-//        try {
-//            obj.put("nohp", sharedPreferences.getString(SPref.toString(), ""));
-//            obj.put("modul", "TAB");
-//        } catch (JSONException e) {
-//            e.printStackTrace();
-//        }
-//        jsonArray.put(obj);
-//
 //        Tampilkan daftar rekening tabungan
-//        loadmymember(llroot, jsonArray.toString());
+        loadmymember(llroot, jsonArray.toString());
 
     }
+//    private void setUpRecyclerView() {
+//        rv = findViewById(R.id.recycler_view);
+//        rv.setLayoutManager(new LinearLayoutManager(this));
+//        mAdapter = new MemberAdapter(mI   tems, this);
+//        rv.setAdapter(mAdapter);
+//        rv.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
 
     private void prepareHistory(){
         mAdapter = new MemberAdapter(mItems);
@@ -117,15 +117,14 @@ public class SaldotabActivity extends AppCompatActivity {
         rv.setAdapter(mAdapter);
     }
 
-    private void loadmymember(LinearLayout root, String myjson) {
+    private void loadmymember(LinearLayout llroot, String myjson) {
 
         pDialog = new ProgressDialog(this);
         pDialog.setMessage("Loading");
         pDialog.setCancelable(false);
         pDialog.show();
 
-        final Call<ResponseMember> history= Client.getApi().member("OBJECT");
-        history.enqueue(new Callback<ResponseMember>() {
+        Client.getApi().member().enqueue(new Callback<ResponseMember>() {
             @Override
             public void onResponse(Call<ResponseMember> call, Response<ResponseMember> response) {
                 pDialog.hide();
@@ -136,6 +135,7 @@ public class SaldotabActivity extends AppCompatActivity {
                         mItems.addAll(Collections.singleton((DataMember) member.getData()));
                         mAdapter.notifyDataSetChanged();
 
+
 //                        ResponseMember resource = member;
                         List<DataMember> datumList = member.getData();
                         int i = 0;
@@ -145,7 +145,6 @@ public class SaldotabActivity extends AppCompatActivity {
                             i++;
                         }
                         mytotal.setText("Total Simpanan : Rp."+String.format("%,.2f", ntotal));
-                        Toast.makeText(SaldotabActivity.this,"eror",Toast.LENGTH_LONG).show();
                     }
                 }else{
                     pesan.setVisibility(View.VISIBLE);
@@ -161,8 +160,6 @@ public class SaldotabActivity extends AppCompatActivity {
         });
 
     }
-
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

@@ -14,11 +14,8 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.SearchView;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bagus.projectpkl.Adapter.ExamItem;
-import com.bagus.projectpkl.Adapter.ExampleAdapter;
 import com.bagus.projectpkl.Adapter.MemberAdapter;
 import com.bagus.projectpkl.Data.DataMember;
 import com.bagus.projectpkl.R;
@@ -44,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // setUpRecyclerView();
+//         setUpRecyclerView();
         // fillExampleList();
         btnceksaldo = findViewById(R.id.cek_saldo);
         btnceksaldo.setOnClickListener(new View.OnClickListener() {
@@ -63,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     private void fillExampleList() {
-        Client.getApi().member("OBJECT").enqueue(new Callback<ResponseMember>() {
+        Client.getApi().member().enqueue(new Callback<ResponseMember>() {
             @Override
             public void onResponse(Call<ResponseMember> call, Response<ResponseMember> response) {
                 mItems =response.body().getData();

@@ -1,4 +1,4 @@
-package com.bagus.projectpkl.Adapter;
+ package com.bagus.projectpkl.Adapter;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -77,6 +77,7 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.MyViewHold
         public void onBindViewHolder(MyViewHolder holder, int position) {
             holder.bindItem(historyList.get(position));
             setAnimation(mView, position);
+
         }
 
         @Override

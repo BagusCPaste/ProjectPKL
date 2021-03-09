@@ -84,7 +84,8 @@ public class activity_login extends AppCompatActivity {
                 pDialog.hide();
                 if (response.isSuccessful()){
                     if (response.body().getStatus()) {
-                        startActivity(new Intent(activity_login.this, MainActivity.class));
+                        startActivity(new Intent(activity_login.this,
+                                SaldotabActivity.class));
                         Toast.makeText(getApplicationContext(), "Login berhasil",
                                 Toast.LENGTH_SHORT).show();
 
