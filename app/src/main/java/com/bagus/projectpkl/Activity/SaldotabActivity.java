@@ -55,7 +55,7 @@ public class SaldotabActivity extends AppCompatActivity {
     TextView greetText;
     public int mystatus = 0;
     private LinearLayout llroot,pesan,total;
-    private BottomAppBar navigasi;
+//    private BottomAppBar navigasi;
     public static final String SHARED_PREFS = "sharedPrefs";
     private ProgressDialog pDialog;
     ResponseMember mymember;
@@ -82,9 +82,9 @@ public class SaldotabActivity extends AppCompatActivity {
 
         mytotal = findViewById(R.id.tvtotal);
         total = findViewById(R.id.itemcardView1);
-        navigasi = findViewById(R.id.navigation);
+//        navigasi = findViewById(R.id.navigation);
         ImageView btn_back = findViewById(R.id.btn_back);
-        navigasi.setVisibility(View.VISIBLE);
+//        navigasi.setVisibility(View.VISIBLE);
 
         //slidermyanggota = findViewById(R.id.imageSlider);
         greetText = findViewById(R.id.textView);

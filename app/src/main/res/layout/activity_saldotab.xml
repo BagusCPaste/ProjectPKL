@@ -29,17 +29,17 @@
             </LinearLayout>
 
         </androidx.core.widget.NestedScrollView>
-        <com.google.android.material.bottomappbar.BottomAppBar
-            android:id="@+id/navigation"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_gravity="bottom"
-            android:backgroundTint="@color/md_grey_100"
-            android:background="#B87070"
-            app:fabAlignmentMode="center"
-            app:fabCradleRoundedCornerRadius="50dp"
-            android:visibility="gone"
-            app:hideOnScroll="true">
+<!--        <com.google.android.material.bottomappbar.BottomAppBar-->
+<!--            android:id="@+id/navigation"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_gravity="bottom"-->
+<!--            android:backgroundTint="@color/md_grey_100"-->
+<!--            android:background="#B87070"-->
+<!--            app:fabAlignmentMode="center"-->
+<!--            app:fabCradleRoundedCornerRadius="50dp"-->
+<!--            android:visibility=""-->
+<!--            app:hideOnScroll="true">-->
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -63,7 +63,7 @@
                     android:text="Total Simpanan : Rp. 0"
                     android:textSize="16sp" />
             </LinearLayout>
-        </com.google.android.material.bottomappbar.BottomAppBar>
+<!--        </com.google.android.material.bottomappbar.BottomAppBar>-->
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 </LinearLayout>
