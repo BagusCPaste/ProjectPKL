@@ -14,7 +14,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Activity.Activity_Register"/>
-        <activity android:name=".Activity.SaldotabActivity"/>
         <activity android:name=".Activity.MainActivity" />
         <activity android:name=".Activity.activity_login" />
         <activity android:name=".SplashScreen">

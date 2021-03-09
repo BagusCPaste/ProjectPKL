@@ -22,6 +22,6 @@ public interface request{
     );
 
     @POST("api/gettagihan")
-    Call<ResponseMember> member();
+    Call<ResponseMember> member(@Field("OBJECT") String object);
 
 }

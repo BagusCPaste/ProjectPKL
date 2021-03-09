@@ -59,40 +59,40 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
 
     }
-    private void fillExampleList() {
-        Client.getApi().member().enqueue(new Callback<ResponseMember>() {
-            @Override
-            public void onResponse(Call<ResponseMember> call, Response<ResponseMember> response) {
-                mItems =response.body().getData();
-                recyclerView.setAdapter(new MemberAdapter(mItems,getApplicationContext()));
-                adapter.notifyDataSetChanged();
-            }
-
-            @Override
-            public void onFailure(Call<ResponseMember> call, Throwable t) {
-                Toast.makeText(MainActivity.this,"koneksi eror", Toast.LENGTH_LONG).show();
-            }
-        });
-    }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.bottom_nav_menu, menu);
-        MenuItem searchItem = menu.findItem(R.id.action_search);
-        SearchView searchView = (SearchView) searchItem.getActionView();
-        searchView.setImeOptions(EditorInfo.IME_ACTION_DONE);
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                return true;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-
-                return false;
-            }
-        });
-        return true;
-    }
+//    private void fillExampleList() {
+//        Client.getApi().member().enqueue(new Callback<ResponseMember>() {
+//            @Override
+//            public void onResponse(Call<ResponseMember> call, Response<ResponseMember> response) {
+//                mItems =response.body().getData();
+//                recyclerView.setAdapter(new MemberAdapter(mItems,getApplicationContext()));
+//                adapter.notifyDataSetChanged();
+//            }
+//
+//            @Override
+//            public void onFailure(Call<ResponseMember> call, Throwable t) {
+//                Toast.makeText(MainActivity.this,"koneksi eror", Toast.LENGTH_LONG).show();
+//            }
+//        });
+//    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        MenuInflater inflater = getMenuInflater();
+//        inflater.inflate(R.menu.bottom_nav_menu, menu);
+//        MenuItem searchItem = menu.findItem(R.id.action_search);
+//        SearchView searchView = (SearchView) searchItem.getActionView();
+//        searchView.setImeOptions(EditorInfo.IME_ACTION_DONE);
+//        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+//            @Override
+//            public boolean onQueryTextSubmit(String query) {
+//                return true;
+//            }
+//
+//            @Override
+//            public boolean onQueryTextChange(String newText) {
+//
+//                return false;
+//            }
+//        });
+//        return true;
+//    }
 }
