@@ -1,4 +1,4 @@
-package com.bagus.projectpkl;
+package com.bagus.projectpkl.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 
-import com.bagus.projectpkl.Activity.activity_login;
+import com.bagus.projectpkl.R;
 
 public class SplashScreen extends AppCompatActivity {
 

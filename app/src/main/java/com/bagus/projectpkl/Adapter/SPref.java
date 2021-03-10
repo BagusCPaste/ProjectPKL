@@ -1,4 +1,4 @@
-package com.bagus.projectpkl.Activity;
+package com.bagus.projectpkl.Adapter;
 
 import org.json.JSONArray;
 

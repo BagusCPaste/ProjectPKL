@@ -6,10 +6,8 @@ import android.content.SharedPreferences;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -23,12 +21,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bagus.projectpkl.Adapter.MemberAdapter;
+import com.bagus.projectpkl.Adapter.SPref;
 import com.bagus.projectpkl.Data.DataMember;
 import com.bagus.projectpkl.R;
 import com.bagus.projectpkl.Respons.ResponseMember;
 import com.bagus.projectpkl.api.Client;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.material.bottomappbar.BottomAppBar;
 
 
 import org.json.JSONArray;
@@ -37,7 +35,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
-import android.app.AlertDialog;
+
 import android.widget.Toast;
 
 import retrofit2.Call;

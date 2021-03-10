@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/home_white"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_setting"
+        android:icon="@drawable/setting_white"
+        android:title="@string/title_setting" />
+
+    <item
+        android:id="@+id/navigation_logout"
+        android:icon="@drawable/profile_icon"
+        android:title="@string/title_profile" />
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:title="Cari Disini"
+        app:showAsAction="ifRoom" />
+
+</menu>
