@@ -34,7 +34,7 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'com.google.firebase:firebase-ads:19.7.0'
     implementation files('libs\\android-smart-image-view-1.0.0.jar')
-    compile 'com.android.support:design:29.0.0'
+    implementation 'com.android.support:design:29.0.0'
     implementation 'androidx.appcompat:appcompat:1.2.0'
 
     implementation 'com.google.android.material:material:1.0.0'
@@ -67,7 +67,7 @@ dependencies {
 // Retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.8.1'
     implementation 'com.google.code.gson:gson:2.6.2'
-    implementation 'com.squareup.retrofit2:converter-gson:2.8.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
 //    tambahan untuk password aye
     implementation 'cyd.awesome.android:awesome-material:1.0'
 
@@ -79,7 +79,7 @@ dependencies {
     implementation 'com.github.GrenderG:Toasty:1.4.2'
 
 //    Pasang Iklan
-//    implementation 'com.google.android.gms:play-services-ads:19.7.0'
+    implementation 'com.google.android.gms:play-services-ads:19.7.0'
 
 
 }
