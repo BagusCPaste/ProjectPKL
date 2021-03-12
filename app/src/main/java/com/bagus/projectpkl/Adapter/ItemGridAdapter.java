@@ -9,7 +9,9 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bagus.projectpkl.Activity.MainActivity;
 import com.bagus.projectpkl.Data.CategoryModel;
+import com.bagus.projectpkl.Data.DataMember;
 import com.bagus.projectpkl.R;
 
 import java.util.List;
@@ -20,6 +22,7 @@ public class ItemGridAdapter extends RecyclerView.Adapter<ItemGridAdapter.Holdr>
     public ItemGridAdapter(List<CategoryModel> data) {
         this.data = data;
     }
+
 
     @SuppressLint("InflateParams")
     @Override

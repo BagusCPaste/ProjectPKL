@@ -26,7 +26,7 @@ import com.bagus.projectpkl.Data.DataMember;
 import com.bagus.projectpkl.R;
 import com.bagus.projectpkl.Respons.ResponseMember;
 import com.bagus.projectpkl.api.Client;
-import com.google.android.gms.ads.AdRequest;
+
 
 
 import org.json.JSONArray;
@@ -66,7 +66,7 @@ public class SaldotabActivity extends AppCompatActivity {
         setContentView(R.layout.activity_saldotab);
 
         //AdView adview = (AdView) findViewById(R.id.adView);
-        AdRequest adrequest = new AdRequest.Builder().build();
+//        AdRequest adrequest = new AdRequest.Builder().build();
         //adview.loadAd(adrequest);
 
         toolbar = findViewById(R.id.toolbar);
@@ -131,14 +131,14 @@ public class SaldotabActivity extends AppCompatActivity {
         rv.setAdapter(mAdapter);
     }
 
-    private void loadmymember(LinearLayout root, String myjson) {
+    private void loadmymember(LinearLayout llroot, String myjson) {
 
         pDialog = new ProgressDialog(this);
         pDialog.setMessage("Loading");
         pDialog.setCancelable(false);
         pDialog.show();
 
-        final Call<ResponseMember> history= Client.getApi().member(myjson);
+        final Call<ResponseMember> history= Client.getApi().member();
         history.enqueue(new Callback<ResponseMember>() {
             @Override
             public void onResponse(Call<ResponseMember> call, Response<ResponseMember> response) {

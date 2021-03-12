@@ -9,7 +9,7 @@
     android:paddingTop="10dp"
     android:paddingBottom="10dp">
 
-    <com.loopj.android.image.SmartImageView
+    <ImageView
         android:id="@+id/itemcardImageView1"
         android:layout_width="40dp"
         android:layout_height="40dp"
